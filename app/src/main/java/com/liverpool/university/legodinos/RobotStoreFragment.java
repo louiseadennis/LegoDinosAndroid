@@ -1,8 +1,7 @@
-package com.liverpool.university.marsrover;
+package com.liverpool.university.legodinos;
 
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

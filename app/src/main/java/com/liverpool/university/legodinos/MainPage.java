@@ -1,4 +1,4 @@
-package com.liverpool.university.marsrover;
+package com.liverpool.university.legodinos;
 
 import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;

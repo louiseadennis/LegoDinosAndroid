@@ -1,32 +1,23 @@
-package com.liverpool.university.marsrover;
+package com.liverpool.university.legodinos;
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
-import android.support.v4.util.TimeUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.LinearLayout;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
-import java.util.concurrent.TimeUnit;
-import java.util.List;
 
 
 import ail.syntax.Literal;
-import eass.semantics.EASSAgent;
 
 import EV3.BluetoothRobot;
 
@@ -137,6 +128,7 @@ public class NavigationPageFrag extends BaseBluetoothFragment implements Adapter
 		view.findViewById(R.id.cmdLeft_A_Bit).setOnClickListener(new ActionClicked(BluetoothRobot.RobotAction.LEFT_A_BIT));
 		view.findViewById(R.id.cmdRight_A_Bit).setOnClickListener(new ActionClicked(BluetoothRobot.RobotAction.RIGHT_A_BIT));
 		view.findViewById(R.id.cmdRight).setOnClickListener(new ActionClicked(BluetoothRobot.RobotAction.RIGHT));
+		view.findViewById(R.id.cmdSnap).setOnClickListener(new ActionClicked(BluetoothRobot.RobotAction.SNAP));
 
 		view.findViewById(R.id.cmdTForward).setOnClickListener(new ActionClicked(BluetoothRobot.RobotAction.FORWARD));
 		view.findViewById(R.id.cmdTFABit).setOnClickListener(new ActionClicked(BluetoothRobot.RobotAction.FORWARD_A_BIT));
@@ -147,6 +139,7 @@ public class NavigationPageFrag extends BaseBluetoothFragment implements Adapter
 		view.findViewById(R.id.cmdTLABit).setOnClickListener(new ActionClicked(BluetoothRobot.RobotAction.LEFT_A_BIT));
 		view.findViewById(R.id.cmdTRABit).setOnClickListener(new ActionClicked(BluetoothRobot.RobotAction.RIGHT_A_BIT));
 		view.findViewById(R.id.cmdTRight).setOnClickListener(new ActionClicked(BluetoothRobot.RobotAction.RIGHT));
+		view.findViewById(R.id.cmdTSnap).setOnClickListener(new ActionClicked(BluetoothRobot.RobotAction.SNAP));
 
 		//Change between icons and text on buttons
 		((CheckBox)view.findViewById(R.id.chkImages)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

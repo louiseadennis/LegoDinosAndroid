@@ -131,6 +131,15 @@
             <Button
                 android:layout_width="105dp"
                 android:layout_height="100dp"
+                android:text="Back"
+                android:id="@+id/button"
+                android:layout_below="@+id/cmdTBABit"
+                android:layout_centerHorizontal="true"
+                android:textSize="17sp" />
+
+            <Button
+                android:layout_width="105dp"
+                android:layout_height="100dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:text="Forward"
@@ -214,6 +223,16 @@
                 android:id="@+id/cmdTRABit"
                 android:layout_alignTop="@id/cmdTStop"
                 android:layout_toEndOf="@+id/cmdTStop"
+                android:layout_marginStart="5dp"
+                android:textSize="17sp"/>
+
+            <Button
+                android:layout_width="105dp"
+                android:layout_height="100dp"
+                android:text="Bite"
+                android:id="@+id/cmdTSnap"
+                android:layout_alignTop="@id/cmdTBack"
+                android:layout_toEndOf="@+id/cmdTRABit"
                 android:layout_marginStart="5dp"
                 android:textSize="17sp"/>
 
@@ -321,6 +340,16 @@
                 android:src="@drawable/downdouble"
                 android:scaleType="center"
                 android:layout_below="@+id/cmdBack_A_Bit"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageButton
+                android:layout_width="105dp"
+                android:layout_height="100dp"
+                android:id="@+id/cmdSnap"
+                android:text="Bite"
+                android:layout_alignTop="@id/cmdBack"
+                android:layout_toEndOf="@+id/cmdRight_A_Bit"
                 android:layout_centerHorizontal="true"
                 />
         </RelativeLayout>

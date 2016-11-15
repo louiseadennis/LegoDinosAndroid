@@ -104,6 +104,10 @@ public class Robot extends BasicRobot
                 pilot = (RemoteRequestPilot) brick.createPilot(6, 10, "C", "B" + '\n');
             }
             messages.append("Created Pilot " + '\n');
+
+            messages.append("Contacting Medium Motor " + '\n');
+            motor = (RemoteRequestRegulatedMotor) brick.createRegulatedMotor("A", 'M');
+            messages.append("Created Medium Motor " + '\n');
         } catch (Exception e) {
             if (home_edition) {
                 irSensor.close();
@@ -171,6 +175,16 @@ public class Robot extends BasicRobot
                     motorL.stop();
                     messages.append("   Closing Left Motor " + '\n');
                     motorL.close();
+
+                    SystemClock.sleep(10);
+                } catch (Exception e) {
+                    System.err.println("Problem closing motors");
+                }
+
+                try {
+                    motor.stop();
+                    messages.append("   Closing Medium Motor " + '\n');
+                    motor.close();
 
                     SystemClock.sleep(10);
                 } catch (Exception e) {

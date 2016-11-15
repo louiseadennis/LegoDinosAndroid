@@ -11,7 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.liverpool.university.marsrover.R;
+import com.liverpool.university.legodinos.R;
 
 import java.util.ArrayList;
 

@@ -80,18 +80,19 @@ public class BluetoothRobot implements Runnable
 	{
 		NOTHING(0), //Index must match with string array rule-options in strings.xml
 		STOP(1),
-		FORWARD(2),
-		FORWARD_A_BIT(3),
-		BACKWARD(4),
-		BACKWARD_A_BIT(5),
-		LEFT(6),
-		LEFT_A_BIT(7),
-		LEFT_A_LOT(8),
-		ARC_LEFT(9),
-		RIGHT(10),
-		RIGHT_A_BIT(11),
-		RIGHT_A_LOT(12),
-		ARC_RIGHT(13);
+		SNAP(2),
+		FORWARD(3),
+		FORWARD_A_BIT(4),
+		BACKWARD(5),
+		BACKWARD_A_BIT(6),
+		LEFT(7),
+		LEFT_A_BIT(8),
+		LEFT_A_LOT(9),
+		ARC_LEFT(10),
+		RIGHT(11),
+		RIGHT_A_BIT(12),
+		RIGHT_A_LOT(13),
+		ARC_RIGHT(14);
 
 
 		static RobotAction[] a = RobotAction.values();
@@ -125,31 +126,33 @@ public class BluetoothRobot implements Runnable
                 return new Action("nothing");
             } else if (value == 1) {
                 return new Action("stop");
-            } else if (value == 2) {
-                return new Action("forward");
             } else if (value == 3) {
-                return new Action("forward_a_bit");
+                return new Action("forward");
             } else if (value == 4) {
-                return new Action("backward");
+                return new Action("forward_a_bit");
             } else if (value == 5) {
-                return new Action("backward_a_bit");
+                return new Action("backward");
             } else if (value == 6) {
-                return new Action("left");
+                return new Action("backward_a_bit");
             } else if (value == 7) {
-                return new Action("left_a_bit");
+                return new Action("left");
             } else if (value == 8) {
+                return new Action("left_a_bit");
+            } else if (value == 9) {
 				return new Action("left_a_lot");
-			} else if (value == 9) {
+			} else if (value == 10) {
 				return new Action("forward_left");
-            } else if (value == 10) {
+            } else if (value == 11) {
 				return new Action("right");
-			} else if (value == 11) {
-				return new Action("right_a_bit");
 			} else if (value == 12) {
-				return new Action("right_a_lot");
+				return new Action("right_a_bit");
 			} else if (value == 13) {
+				return new Action("right_a_lot");
+			} else if (value == 14) {
 				return new Action("forward_right");
-			} else {
+			} else if (value == 2) {
+				return new Action("snap");
+			} {
                 return new Action("stop");
             }
         }
@@ -440,6 +443,9 @@ public class BluetoothRobot implements Runnable
 							break;
 						case RIGHT_A_BIT:
 							abstraction_engine.very_short_right();
+							break;
+						case SNAP:
+							abstraction_engine.scare();
 							break;
 					}
 				}

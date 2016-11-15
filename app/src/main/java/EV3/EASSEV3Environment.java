@@ -182,6 +182,8 @@ public class EASSEV3Environment extends DefaultEASSEnvironment {
 			((Robot) robots.get(agName)).short_right();
 		} else if (act.getFunctor().equals("left_a_lot")) {
 			((Robot) robots.get(agName)).short_left();
+		} else if (act.getFunctor().equals("snap")) {
+			((Robot) robots.get(agName)).scare();
 		}
 
 		return u;
